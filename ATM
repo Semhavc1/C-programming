@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{   int secim=0;
+    int bakiye=1000;
+    int cek,yatir;
+    tekrar:
+    printf("Bakiyeniz: %d\n\n",bakiye);
+    printf("**** ISLEMLER ****\n");
+    printf("1. Para Cekme\n");
+    printf("2. Para Yatirma\n");
+    printf("3. Para Bakiye Sorgulama\n");
+    printf("4. Kart Iade\n");
+
+    printf("Isleminizi seciniz:");
+    scanf("%d",&secim);
+
+    switch(secim){
+case 1:
+    system("CLS");
+    bakiye=bakiye-5;
+    printf("bakiyeniz %d\n",bakiye);
+    printf("cekmek istediginiz tutari giriniz: ");
+    scanf("%d",&cek);
+    bakiye=bakiye-cek;
+    printf("yeni bakiye: %d\n\n\n",bakiye);
+    goto tekrar;
+case 2:
+    system("CLS");
+    bakiye-=5;
+    printf("bakiyeniz %d\n",bakiye);
+    printf("yatirmak istediiniz tutari giriniz:");
+    scanf("%d",&yatir);
+    bakiye+=yatir;
+    printf("yeni bakiye: %d\n\n\n",bakiye);
+    goto tekrar;
+case 3:
+    system("CLS");
+    bakiye-=5;
+    printf("bakiyeniz: %d\n\n\n",bakiye);
+    goto tekrar;
+case 4:
+    system("CLS");
+    printf("kartinizi almayi unutmayiniz ");
+    break;
+default:
+    printf("lutfen gecerli bir islem giriniz\n\n\n");
+    goto tekrar;
+
+    }
+   return 0;
+}
