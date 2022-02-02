@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int sayi,asalsayi1,asalsayi2,i,j,sayac=0;
+    printf("sayi gir: ");
+    scanf("%d",&sayi); // sayi=16
+    for(i=sayi+100; i>=sayi; i--)
+    {
+        for(j=i-1; j>=2; j--)
+        {
+            if(i%j==0)
+                sayac++;
+        }
+        if(sayac==0)
+            asalsayi1=i;
+        sayac=0;
+    }
+    for(i=sayi-100; i<=sayi; i++)
+    {
+        for(j=i-1; j>=2; j--)
+        {
+            if(i%j==0)
+                sayac++;
+        }
+        if(sayac==0)
+            asalsayi2=i;
+        sayac=0;
+    }
+    if(sayi-asalsayi1==asalsayi2-sayi)
+        printf("%d-%d",asalsayi1,asalsayi2);
+    else if(asalsayi1-sayi<sayi-asalsayi2)
+        printf("%d",asalsayi1);
+    else
+        printf("%d",asalsayi2);
+    return 0;
+}
