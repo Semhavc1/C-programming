@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(){
+    int sec,rastgele,sayac1=0,sayac2=0,karakter;
+    while(1){
+    srand(time(NULL));
+    rastgele=1+rand()%3;
+    printf("1.tas\n2.kagit\n3.makas\nbir sayi giriniz:");
+    scanf("%d",&sec);
+    if(rastgele==sec)
+        printf("berabere\n\n");
+    if(rastgele==2 && sec==1 || rastgele==3 && sec==2 || rastgele==1 && sec==3){
+        printf("robot kazandi\n\n");sayac1++;}
+    if(rastgele==1 && sec==2 || rastgele==2 && sec==3 || rastgele==3 && sec==1){
+        printf("oyuncu kazandi\n\n");sayac2++;}
+    if(sayac1==3||sayac2==3){
+        printf("robot=%d oyuncu=%d\n\n",sayac1,sayac2);
+        if(sayac1>sayac2) printf("robot kazandi\n\n");
+        else printf("oyuncu kazandi\n\n");
+        printf("game over:cikmak istiyorsaniz 1 i tuslayin: ");
+        scanf("%d",&karakter);
+        if(karakter==1)break;
+        sayac1=0; sayac2=0; }    }
+   return 0;}
