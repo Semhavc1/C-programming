@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+/*
+long faktoriyelozyineleme(int x)
+{
+    if(x<=1){return 1;}
+    return x*faktoriyelozyineleme(x-1);
+    }
+int main()
+{
+    int sayi,a;
+    printf("sayi gir: ");
+    scanf("%d",&a);
+    for (sayi=0;sayi<=a;sayi++)
+    {
+        printf("%d!=%li\n",sayi,faktoriyelozyineleme(sayi));
+    }
+
+    return 0;
+}
+*/
+
+long fibonacci(int x)//5
+{
+     if(x==1 || x==0 )
+        return 1;
+
+    return fibonacci(x-1)+fibonacci(x-2);
+}
+int main()
+{
+    int sayi;
+    for (sayi=0;sayi<15;sayi++)
+    printf("%d  %li\n",sayi+1,fibonacci(sayi));
+    return 0;
+}
