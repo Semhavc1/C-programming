@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(){
+    int rastgele,rastgele2;
+    char karakter;
+    while(1){
+        printf("zar at:");
+        scanf("%s",&karakter);
+        srand(time(NULL));
+        rastgele=1+rand()%6;
+        rastgele2=1+rand()%6;
+        if(karakter=='.')
+            printf("1.zar: %d\n2.zar: %d\n\n",rastgele,rastgele2);
+            }
+    return 0;
+}
