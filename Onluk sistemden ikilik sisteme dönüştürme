@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int sayi=0,i=0,j,d[20];
+    printf("sayi giriniz:");
+    scanf("%d",&sayi);
+    while(sayi>0)
+    {
+        d[i]=sayi%2;
+        sayi/=2;
+        i++;
+    }
+    for(j=i-1;j>=0;j--)
+    {
+        printf("%d ",d[j]);
+    }
+
+    return 0;
+}
